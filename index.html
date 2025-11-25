@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caderno de Campo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-brand-darker: #111827;
+        --color-brand-dark: #1F2937;
+        --color-brand-light: #374151;
+        --color-brand-accent: #00843D;
+        --color-brand-accent-hover: #006a31;
+        --color-brand-text: #F9FAFB;
+        --color-brand-text-secondary: #9CA3AF;
+      }
+      .theme-light {
+        --color-brand-darker: #F3EAD3; /* Beige, recycled paper for the outer background */
+        --color-brand-dark: #FFFFFF;   /* White for the main app container for a clean look */
+        --color-brand-light: #F8F5F2;  /* A very light off-white for cards/inputs */
+        --color-brand-accent: #00843D;
+        --color-brand-accent-hover: #006a31;
+        --color-brand-text: #1F2937;       /* Dark text for readability */
+        --color-brand-text-secondary: #6B7280; /* A standard grey for secondary text */
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-dark': 'var(--color-brand-dark)',
+              'brand-darker': 'var(--color-brand-darker)',
+              'brand-light': 'var(--color-brand-light)',
+              'brand-accent': 'var(--color-brand-accent)',
+              'brand-accent-hover': 'var(--color-brand-accent-hover)',
+              'brand-text': 'var(--color-brand-text)',
+              'brand-text-secondary': 'var(--color-brand-text-secondary)',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://cdn.skypack.dev/recharts@2.12.7"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
