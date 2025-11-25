@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main   # Altere para o branch que você usa como principal
+      - main # ou troque pelo branch padrão do seu projeto
 
 jobs:
   build-deploy:
@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 18
 
-      - name: Instalar dependências
+      - name: Instalar dependências (ignorar conflitos de peer)
         run: npm install --legacy-peer-deps
 
       - name: Build do Projeto
@@ -29,3 +29,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+    
